@@ -81,14 +81,38 @@ export default {
           type: "success",
           timeout: 3000
       });
-      const mealIngredients = {
-        eggs: this.eggs,
-        bacon: this.bacon,
-        oil: this.oil,
-        milk: this.milk,
-        butter: this.butter,
-        pasta: this.pasta
-      }
+      const mealIngredients = [
+        {
+          name: 'eggs',
+          quantity: this.eggs,
+          imageExt: 'eggs.png'
+        },
+        {
+          name: 'oil',
+          quantity: this.oil,
+          imageExt: 'oil.png'
+        },
+        {
+          name: 'milk',
+          quantity: this.milk,
+          imageExt: 'milk.png'
+        },
+        {
+          name: 'butter',
+          quantity: this.butter,
+          imageExt: 'butter.png'
+        },
+        {
+          name: 'pasta',
+          quantity: this.pasta,
+          imageExt: 'pasta.png'
+        },
+        {
+          name: 'bacon',
+          quantity: this.bacon,
+          imageExt: 'bacon.png'
+        }
+      ]
       const bannerProps = {
         backgroundMedia: {
           type: 'image',

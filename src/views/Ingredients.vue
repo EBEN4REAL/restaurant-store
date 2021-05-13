@@ -5,19 +5,10 @@
       <h3 class="page__stores-header">Restaurant Info</h3>
     </div>
     <div class="page__stores--cards-wrapper">
-      <div class="page__stores--card">
-        <h3>Ingredient</h3>
-        <img src="" />
-        <p>Quantity</p>
-      </div>
-      <div class="page__stores--card">
-        
-      </div>
-      <div class="page__stores--card">
-
-      </div>
-      <div class="page__stores--card">
-        
+      <div class="page__stores--card" v-for="(ingredient,i) in capitalizedIngredients" :key="i">
+        <h3>{{ingredient.name}}</h3>
+        <img :src="require(`@/assets/img/${ingredient.imageExt}`)" width="20px" />
+        <p>{{ingredient.quantity}}</p>
       </div>
     </div>
   </div>
@@ -38,7 +29,12 @@ export default {
     }
   },
   computed: {
-   
+   capitalizedIngredients() {
+    return this.mealIngredients.map(mealIngredient => {
+      mealIngredient.name = mealIngredient.name.toUpperCase()
+      return mealIngredient
+    })
+   }
   },
   mounted() {
     this.bannerProps = localStorage.getItem('bannerProps') 
