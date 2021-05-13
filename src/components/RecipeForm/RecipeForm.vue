@@ -51,8 +51,11 @@ export default {
         });
         return
       }
+
       let ingredients = Object.assign({}, this.ingredients)
+      
       let ingredientsArr = []
+
       for(let ingredient in ingredients) {
         let quantity
         quantity = ingredient === 'pasta' 
@@ -72,12 +75,13 @@ export default {
         ingredientsArr.push(quantity)
       }
 
-      console.log(ingredientsArr)
       this.meals = Math.min(...ingredientsArr)
+
       this.$toast(`${this.meals} Meals`, {
-            type: "success",
-            timeout: 3000
-        });
+          type: "success",
+          timeout: 3000
+      });
+      this.$router.push({name: 'ingredients'})
     }
   }
 }
