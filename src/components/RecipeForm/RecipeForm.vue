@@ -81,6 +81,23 @@ export default {
           type: "success",
           timeout: 3000
       });
+      const mealIngredients = {
+        eggs: this.eggs,
+        bacon: this.bacon,
+        oil: this.oil,
+        milk: this.milk,
+        butter: this.butter,
+        pasta: this.pasta
+      }
+      const bannerProps = {
+        backgroundMedia: {
+          type: 'image',
+          src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorp_j0e4vlXj-3y_fWIbFmDwlUDtO2TSjsw&usqp=CAU'
+        },
+        text: `${this.meals} Meals`
+      }
+      localStorage.setItem('mealIngredients', JSON.stringify(mealIngredients))
+      localStorage.setItem('bannerProps', JSON.stringify(bannerProps))
       this.$router.push({name: 'ingredients'})
     }
   }

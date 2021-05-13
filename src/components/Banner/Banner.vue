@@ -10,7 +10,7 @@
         </video>
       </div>
       <div class="banner__text" v-if="text">
-        <span class="banner__text-message">{{ text }}</span>
+        <span class="banner__text-message ">{{ text }}</span>
       </div>
     </div>
   </div>

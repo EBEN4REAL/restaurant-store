@@ -1,12 +1,10 @@
 <template>
   <div class="store-list">
     <p>Here you can find all of our restaurants. We have {{ storesCount }} stores right now!</p>
-    <div>
+    <div class="store-list__form-conainer">
       <form class="store-list__form">
-        <input type="text" class="store-list__textbox" placeholder="Search">
-        <button title="Search"  type="submit" class="store-list__button">
-          <i class="fa fa-search" aria-hidden="true" ></i>
-        </button>
+        <input type="text" class="store-list__textbox" placeholder="Search stores..." v-model="searchText">
+        <i class="fa fa-search" aria-hidden="true" ></i>  
       </form>
     </div>
     <div class="store-list__container">
