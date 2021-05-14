@@ -1,0 +1,21 @@
+@import './variables/_color.scss';
+@import './variables/_spacing.scss';
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+ 
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(211, 211, 211, 0.49);
+    border-radius: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }

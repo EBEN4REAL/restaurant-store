@@ -1,5 +1,5 @@
 <template>
-  <div class="banner" :class="bannerStyles">
+  <div class="banner">
     <div class="banner__wrapper">
       <div class="banner__image" v-if="backgroundMedia.type === 'image'">
         <img class="banner__image-asset" :src="backgroundMedia.src" :alt="text" :title="text" />

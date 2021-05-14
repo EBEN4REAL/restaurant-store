@@ -1,5 +1,6 @@
 @import './variables/_color.scss';
 @import './variables/_spacing.scss';
+@import "scroll";
 
 html, body {
   min-height: 100%;
@@ -8,6 +9,7 @@ html, body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-main-container);
 }
 
 #app {
@@ -35,15 +37,22 @@ html, body {
       width: 25%;
       background: var(--color-white);
       height: 200px;
-      -webkit-box-shadow: 0px 3px 3px #0000000D;
-      box-shadow: 0px 3px 3px #0000000D;
       border-radius: 0.7rem;
       margin-right: 25px;
-      border: 1px solid var(--color-gray);
+      border: 0.5px solid var(--color-light-gray);
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      transition: .5s all ease-in-out;
+      p{
+        margin-top: 15px;
+      }
+
+      &:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 8px 32px rgb(77, 101, 117 , 35%);
+      }
     }
     &-header-wrapper {
       margin-top: 15px;
@@ -57,7 +66,7 @@ html, body {
         content: '';
         position:absolute;
         bottom: 10px;
-        right: 657px;
+        right: 47%;
         top: 30px;
         width: 80px;
         height: 3px;
@@ -67,10 +76,24 @@ html, body {
       }
     }
   }
+  
 }
 
-@media (min-width: 1200px) {
-  .page {
-    // max-width: var(--boxed-max-width);
+@media (max-width: 575px) {
+  .page__stores-header{
+    &::after{
+      right: 40% !important;
+    }
+  }
+  .page__stores--cards-wrapper{
+    width: 90%;
+    margin: auto;
+    display: block !important;
+    
+  }
+  .page__stores--card{
+    width: 100%  !important;
+    margin-bottom: 15px;
   }
 }
+

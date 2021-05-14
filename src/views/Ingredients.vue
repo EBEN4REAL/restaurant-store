@@ -7,7 +7,7 @@
     <div class="page__stores--cards-wrapper">
       <div class="page__stores--card" v-for="(ingredient,i) in capitalizedIngredients" :key="i">
         <h3>{{ingredient.name}}</h3>
-        <img :src="require(`@/assets/img/${ingredient.imageExt}`)" width="20px" />
+        <img :src="require(`@/assets/img/${ingredient.imageExt}`)" width="50" />
         <p>{{ingredient.quantity}}</p>
       </div>
     </div>
@@ -30,8 +30,8 @@ export default {
   },
   computed: {
    capitalizedIngredients() {
-    return this.mealIngredients.map(mealIngredient => {
-      mealIngredient.name = mealIngredient.name.toUpperCase()
+    return Array.from(this.mealIngredients).map(mealIngredient => {
+      mealIngredient.name = `${ mealIngredient.name.charAt(0).toUpperCase()}${mealIngredient.name.slice(1).toLowerCase()}`  
       return mealIngredient
     })
    }
