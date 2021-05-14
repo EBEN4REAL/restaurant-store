@@ -80,34 +80,44 @@ html, body {
 }
 
 @media (max-width: 575px) {
-  .page__stores-header{
-    &::after{
-      right: 40% !important;
+  .page{
+    .page__stores{
+      &-header{
+        &::after{
+          right: 40% !important;
+        }
+      }
+      &--cards-wrapper{
+        width: 90%;
+        margin: auto;
+        display: block !important;
+      }
+      &--card{
+        width: 100%  !important;
+        margin-bottom: 15px;
+      }
     }
-  }
-  .page__stores--cards-wrapper{
-    width: 90%;
-    margin: auto;
-    display: block !important;
-  }
-  .page__stores--card{
-    width: 100%  !important;
-    margin-bottom: 15px;
   }
 }
 @media screen and (min-width: 768px) and  (max-width: 1023px) {
-  .page__stores-header{
-    &::after{
-      right: 45% !important;
+  .page{
+    .page__stores{
+      &-header{
+        &::after{
+          right: 45% !important;
+        }
+      }
+      &--cards-wrapper{
+        width: 60%;
+        margin: auto;
+        display: block !important;
+      }
+      &--card{
+        width: 100%  !important;
+        margin-bottom: 15px;
+      }
     }
   }
-  .page__stores--cards-wrapper{
-    width: 50%;
-    margin: auto;
-    display: block !important;
-  }
-  .page__stores--card{
-    width: 100%  !important;
-    margin-bottom: 15px;
-  }
 }
+
+
