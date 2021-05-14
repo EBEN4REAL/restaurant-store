@@ -15,8 +15,8 @@
         <ul class="pagination">
           <li class="page-item"><a class="page-link" href="#" v-if="page != 1" @click="page--">Previous</a>
           </li>
-          <li class="page-item">
-            <button type="button" class="page-link" v-for="(pageNumber,i) in pages.slice(page-1, page+5)"  :key="i" @click="page = pageNumber"> {{pageNumber}} </button>
+          <li class="page-item" v-for="(pageNumber,i) in pages.slice(page-1, page+5)"  :key="i" @click="page = pageNumber">
+            <button type="button" class="page-link" > {{pageNumber}} </button>
           </li>
           <li class="page-item"><button class="page-link"  @click="page++" v-if="page < pages.length">Next</button>
           </li>
@@ -40,7 +40,6 @@ export default {
   data(){
     return {
       searchText: '',
-      posts : [''],
 			page: 1,
 			perPage: 10,
 			pages: [],
@@ -50,11 +49,6 @@ export default {
     stores: {
       type: Array,
       default: () => []
-    }
-  },
-  watch:{
-    filteredStores() {
-      this.setPages();
     }
   }, 
   computed: {
@@ -80,13 +74,16 @@ export default {
   methods: {
 		setPages () {
 			let numberOfPages = Math.ceil(this.filteredStores.length / this.perPage);
-      console.log(numberOfPages)
 			for (let index = 1; index <= numberOfPages; index++) {
 				this.pages.push(index);
 			}
       console.log(this.pages)
 		},
 		paginate (stores) {
+      let numberOfPages = Math.ceil(stores.length / this.perPage);
+			for (let index = 1; index <= numberOfPages; index++) {
+				this.pages.push(index);
+			}
 			let page = this.page;
 			let perPage = this.perPage;
 			let from = (page * perPage) - perPage;
