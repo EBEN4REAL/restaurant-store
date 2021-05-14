@@ -4,6 +4,7 @@
     <div class="pages__stores-list">
       <StoreList :stores="stores" />
     </div>
+   
   </div>
 </template>
 
@@ -20,7 +21,11 @@ export default {
   data () {
     return {
       currentTime: moment().format('dddd, MMMM Do YYYY, h:mm:ss a'),
-      stores
+      stores,
+      posts : [''],
+			page: 1,
+			perPage: 9,
+			pages: [],	
     }
   },
   computed: {
