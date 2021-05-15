@@ -4,7 +4,7 @@
     <div class="page__stores-header-wrapper">
       <h3 class="page__stores-header">Restaurant Info</h3>
     </div>
-    <div class="page__stores--cards-wrapper">
+    <div class="page__stores--cards-wrapper mt-4">
       <div class="page__stores--card" v-for="(ingredient,i) in capitalizedIngredients" :key="i">
         <h3>{{ingredient.name}}</h3>
         <img :src="require(`@/assets/img/${ingredient.imageExt}`)" width="50" />
@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import IngredientsBanner from '@/components/Banner/Banner.vue'
+const IngredientsBanner = () => import("@/components/Banner/Banner.vue");
+
 
 export default {
   name: 'Stores',

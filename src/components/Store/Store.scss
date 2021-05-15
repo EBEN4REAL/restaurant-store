@@ -1,9 +1,9 @@
 .store {
   display: flex;
   flex-direction: column;
-  flex: 1 0 100%;
+  flex: 1 0 20%;
   margin: 0 0 var(--space-m) 0;
-
+  margin-right: 10px;
   &__wrapper {
     display: flex;
     flex-direction: column;

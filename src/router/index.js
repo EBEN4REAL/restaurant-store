@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
-import Meals from '@/views/Meals.vue';
-import Restaurants from '@/views/Restaurants.vue';
-import Ingredients from '@/views/Ingredients.vue';
+
+const Home = () => import('@/views/Home.vue')
+const Meals = () => import('@/views/Meals.vue')
+const Restaurants = () => import('@/views/Restaurants.vue')
+const Ingredients = () => import('@/views/Ingredients.vue')
+
 
 Vue.use(VueRouter)
 

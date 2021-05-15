@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import RecipeForm from '@/components/RecipeForm/RecipeForm';
+const RecipeForm = () => import("@/components/RecipeForm/RecipeForm");
 
 export default {
   name: 'Meals',

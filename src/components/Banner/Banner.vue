@@ -2,7 +2,7 @@
   <div class="banner">
     <div class="banner__wrapper">
       <div class="banner__image" v-if="backgroundMedia.type === 'image'">
-        <img class="banner__image-asset" :src="backgroundMedia.src" :alt="text" :title="text" />
+        <img class="banner__image-asset" :src="require(`@/assets/img/${backgroundMedia.src}`)" :alt="text" :title="text" />
       </div>
       <div class="banner__video" v-if="backgroundMedia.type === 'video'">
         <video class="banner__video-asset" autoplay muted>

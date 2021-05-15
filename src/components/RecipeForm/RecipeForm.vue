@@ -19,9 +19,14 @@
   </div>
 </template>
 <style lang="scss">
-@import './RecipeForm.scss';
+  @import './RecipeForm.scss';
 </style>
 <script>
+import Vue from 'vue'
+import "vue-toastification/dist/index.css";
+import Toast from "vue-toastification";
+Vue.use(Toast);
+
 export default {
   name: 'RecipeForm',
   data () {
@@ -40,6 +45,9 @@ export default {
       type: Object,
       default: () => ({})
     }
+  },
+  created(){
+    
   },
   methods: {
     calculate (event) {
@@ -116,7 +124,7 @@ export default {
       const bannerProps = {
         backgroundMedia: {
           type: 'image',
-          src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorp_j0e4vlXj-3y_fWIbFmDwlUDtO2TSjsw&usqp=CAU'
+          src: 'storeBg.jpg'
         },
         text: `${this.meals} Meals`
       }
