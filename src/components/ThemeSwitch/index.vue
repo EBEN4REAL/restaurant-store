@@ -35,7 +35,6 @@ export default {
                     link.classList.add('dark-mode-text')
                     link.classList.remove('light-mode-text')
                 });
-                console.log(headerLinks)
                 
             }else {
                 appBody.classList.add('light-mode') 
