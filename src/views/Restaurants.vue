@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import moment from 'moment/src/moment'
+import moment from 'moment'
 const StoreList = () => import("@/components/StoreList/StoreList");
 const stores = require('@/assets/stores/stores.json');
 
