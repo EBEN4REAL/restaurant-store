@@ -1,5 +1,5 @@
 <template>
-  <div class="page page__carbonara">
+  <div class="page page__carbonara" data-testid="meals">
     <h1>Pasta carbonara meals</h1>
     <div class="page__carbonara-meals">
       <RecipeForm :ingredients="secretIngredients"/>
