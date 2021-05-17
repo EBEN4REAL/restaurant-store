@@ -10,14 +10,22 @@
       <li class="header__navigation-item">
         <router-link :to="{path: '/restaurants'}" class="header__navigation-item-link">Our Restaurants</router-link>
       </li>
+      <li>
+        <ThemeSwitch />
+      </li>
     </ul>
   </div>
 </template>
 <style lang="scss">
-@import './Header.scss';
+  @import './Header.scss';
 </style>
 <script>
+import  ThemeSwitch from "@/components/ThemeSwitch"
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  components: {
+    ThemeSwitch
+  }
 }
 </script>

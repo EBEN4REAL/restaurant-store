@@ -10,8 +10,10 @@
     flex: 1 0 100%;
     margin: 0;
     padding: var(--space-xxs) var(--space-s);
-    border: 1px solid var(--color-black);
     border-radius: var(--space-xxs);
+    box-shadow: 0 8px 32px rgb(77, 101, 117 , 35%);
+    border-radius: 12px;
+    padding-bottom: 20px;
   }
 
   &__title {

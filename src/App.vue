@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app ">
     <Header />
-    <div class="app-container">
+    <div class="app-container mt-4">
       <router-view />
     </div>
   </div>
@@ -16,6 +16,12 @@ export default {
   name: 'App',
   components: {
     Header
-  }
+  },
+  data() {
+    return {
+      
+    }
+  },
+ 
 }
 </script>

@@ -1,20 +1,21 @@
 <template>
-  <div class="recipe-form">
-    <p>Introduce below the quantity for each ingredient you have and we will calculate how many Pasta Carbonara meals you can cook!</p>
-    <form class="recipe-form__form">
+  <div class="recipe-form pt-3">
+    <h6 class="text-center">Introduce below the quantity for each ingredient you have<br>
+     and we will calculate how many Pasta Carbonara meals you can cook!</h6>
+    <form class="recipe-form__form ">
       <label for="recipe-eggs">Eggs</label>
-      <input class="recipe-form__form-input" type="number" name="eggs" id="recipe-eggs" value="0" v-model="eggs" />
+      <input class="recipe-form__form-input form-control" type="number"  name="eggs" id="recipe-eggs" value="0" v-model="eggs" />
       <label for="recipe-pasta">Pasta</label>
-      <input class="recipe-form__form-input" type="number" name="pasta" id="recipe-pasta" value="0" v-model="pasta" />
+      <input class="recipe-form__form-input form-control" type="number"  name="pasta" id="recipe-pasta" value="0" v-model="pasta" />
       <label for="recipe-butter">Butter</label>
-      <input class="recipe-form__form-input" type="number" name="butter" id="recipe-butter" value="0" v-model="butter" />
+      <input class="recipe-form__form-input form-control" type="number"  name="butter" id="recipe-butter" value="0" v-model="butter" />
       <label for="recipe-milk">Milk</label>
-      <input class="recipe-form__form-input" type="number" name="milk" id="recipe-milk" value="0" v-model="milk" />
+      <input class="recipe-form__form-input form-control" type="number"  name="milk" id="recipe-milk" value="0" v-model="milk" />
       <label for="recipe-oil">Oil</label>
-      <input class="recipe-form__form-input" type="number" name="oil" id="recipe-oil" value="0" v-model="oil" />
+      <input class="recipe-form__form-input form-control" type="number"  name="oil" id="recipe-oil" value="0" v-model="oil" />
       <label for="recipe-bacon">Bacon</label>
-      <input class="recipe-form__form-input" type="number" name="bacon" id="recipe-bacon" value="0" v-model="bacon" />
-      <button type="submit" @click="calculate">Calculate</button>
+      <input class="recipe-form__form-input form-control" type="number"  name="bacon" id="recipe-bacon" value="0" v-model="bacon" />
+      <button type="submit" class="btn btn-warning" @click="calculate">Calculate</button>
     </form>
   </div>
 </template>

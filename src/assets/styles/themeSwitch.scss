@@ -1,0 +1,69 @@
+.light-mode {
+    background: var(--color-main-container)  !important;
+    color: var(--color-black) !important
+}
+.dark-mode {
+    background: var( --color-black)  !important;
+    color: var(--color-white) !important;
+}
+.dark-mode-border{
+    border: 1px solid var( --color-white) !important;
+}
+.light-mode-border{
+    border: 1px solid var( --color-black) !important;
+}
+.light-mode-text {
+    color: var(--color-black) !important
+}
+.dark-mode-text {
+    color: var(--color-white) !important
+}
+  
+.toggler-button {
+    width: 100%;
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    p {
+      margin-bottom: 0;
+    }
+    input {
+      position: absolute;
+      width: 46px;
+      height: 25px;
+      z-index: -10;
+    }
+    .dark_check {
+      background-color: var(--color-light-gray);
+      &.refresh_dark_check {
+        background-color: var(--color-primary);
+      }
+      &.light_check {
+        background-color: var(--color-light-mode);
+        border: 1px solid var(--color-light-mode);
+      }
+      border-radius: 15px;
+      border: 1px solid var(--color-gray);
+      height: 25px;
+      width: 46px;
+      padding: 3px 2px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .dark_check_inner {
+        transition: 0.2s all;
+        background-color: var(--color-white);
+        height: 19px;
+        width: 19px;
+        border-radius: 50%;
+        position: relative;
+        left: 0;
+      }
+    }
+    &.refresh_toggler {
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      justify-content: center;
+    }
+  }

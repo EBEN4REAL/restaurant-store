@@ -1,4 +1,3 @@
-import { mount } from '@vue/test-utils';
 
 describe('Loads app successfully', () => {
     it('Visits the app root url', () => {

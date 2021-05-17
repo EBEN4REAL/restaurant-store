@@ -1,6 +1,6 @@
 <template>
-  <div class="page page__carbonara" data-testid="meals">
-    <h1>Pasta carbonara meals</h1>
+  <div class="page page__carbonara py-4" data-testid="meals">
+    <h6 class="text-center">Pasta carbonara meals</h6>
     <div class="page__carbonara-meals">
       <RecipeForm :ingredients="secretIngredients"/>
     </div>

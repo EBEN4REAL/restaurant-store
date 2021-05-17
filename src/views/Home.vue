@@ -1,5 +1,5 @@
 <template>
-  <div class="page page__home">
+  <div class="page page__home mt-5">
     <p>{{ welcomeMessage }}</p>
   </div>
 </template>
@@ -9,6 +9,9 @@ import moment from 'moment'
 
 export default {
   name: 'Home',
+  components: {
+
+  },
   data () {
     return {
       currentTime: moment().format('dddd, MMMM Do YYYY, h:mm:ss a')
@@ -19,12 +22,18 @@ export default {
       return 'Welcome! Your local time is: ' + this.currentTime;
     }
   },
+  created() {
+    
+  },
   mounted() {
     const setTimer = () => setTimeout(() => {
       this.currentTime = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
       setTimer();
     }, 1000);
     setTimer();
+  },
+  methods: {
+    
   }
 }
 </script>
