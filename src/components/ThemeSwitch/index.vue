@@ -15,11 +15,7 @@ export default {
     name: 'ThemeSwitch',
     data() {
         return {
-            nightMode: localStorage.getItem('nightMode') && localStorage.getItem('nightMode') == 'true' 
-                ? true 
-                : localStorage.getItem('nightMode') && localStorage.getItem('nightMode') == 'false' 
-                ? false 
-                : false,
+            nightMode:  false,
             themeChanger:null
         }
     },
@@ -27,7 +23,6 @@ export default {
         darkThemeSwitch() {
             this.themeChanger._darkThemeSwitch();
             this.nightMode = !this.nightMode
-            localStorage.setItem('nightMode', this.nightMode)
         },
     },
     created() {

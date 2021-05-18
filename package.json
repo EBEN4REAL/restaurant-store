@@ -11,16 +11,15 @@
     "test:components": "vue-cli-service test:components"
   },
   "dependencies": {
-    "@vue/cli-plugin-e2e-cypress": "^4.5.13",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
     "core-js": "^3.6.5",
-    "cypress": "^7.3.0",
     "moment": "^2.29.1",
     "vue": "^2.6.11",
     "vue-lazyload": "^1.3.3",
     "vue-router": "^3.2.0",
     "vue-toastification": "^1.7.11",
+    "webpack": "^5.37.0",
     "webpack-bundle-analyzer": "^4.4.1"
   },
   "devDependencies": {
