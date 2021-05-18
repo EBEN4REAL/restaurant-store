@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import { mount } from '@cypress/vue'
 import Greetings from '@/components/Greetings.vue'
 

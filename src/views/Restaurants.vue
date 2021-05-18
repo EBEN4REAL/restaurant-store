@@ -11,7 +11,7 @@
 <script>
 import moment from 'moment'
 const StoreList = () => import("@/components/StoreList/StoreList");
-const stores = require('@/assets/stores/stores.json');
+import stores from '@/assets/stores/stores.json';
 
 export default {
   name: 'Stores',
