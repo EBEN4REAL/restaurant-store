@@ -73,8 +73,9 @@ describe('Meals component', () => {
                   class: "milk",
                 } 
               ]
-              const submitMealBtn =  cy.get('.calc-meals-btn')
-              submitMealBtn.click()
+              
+              const submitMealBtn =  cy.get(`.calc-meals-btn`, { timeout: 5000 })
+              submitMealBtn.click({force: true})
               for(let i=0; i<recipeFormInputs.length; i++)  {
                 it(`Should get corresponding inputs when meal component is mounted`, () => {
                     const inputField = cy.get(`.${recipeFormInputs[i].value}`)
