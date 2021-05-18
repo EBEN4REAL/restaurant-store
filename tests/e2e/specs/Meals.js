@@ -83,7 +83,6 @@ describe('Meals component', () => {
                     expect(inputField).to.be.greaterThan(0)
                 })
               }
-         
         })
     })
   
