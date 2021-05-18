@@ -6,9 +6,9 @@
     </div>
     <div class="page__stores--cards-wrapper mt-4">
       <div class="page__stores--card" v-for="(ingredient,i) in capitalizedIngredients" :key="i">
-        <h3>{{ingredient.name}}</h3>
+        <h3 class="text-black">{{ingredient.name}}</h3>
         <img :src="require(`@/assets/img/${ingredient.imageExt}`)" width="50" />
-        <p>{{ingredient.quantity}}</p>
+        <p class="text-black">{{ingredient.quantity}}</p>
       </div>
     </div>
   </div>

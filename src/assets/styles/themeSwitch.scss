@@ -1,24 +1,4 @@
-.light-mode {
-    background: var(--color-main-container)  !important;
-    color: var(--color-black) !important
-}
-.dark-mode {
-    background: var( --color-black)  !important;
-    color: var(--color-white) !important;
-}
-.dark-mode-border{
-    border: 1px solid var( --color-white) !important;
-}
-.light-mode-border{
-    border: 1px solid var( --color-black) !important;
-}
-.light-mode-text {
-    color: var(--color-black) !important
-}
-.dark-mode-text {
-    color: var(--color-white) !important
-}
-  
+
 .toggler-button {
     width: 100%;
     margin-right: 35px;

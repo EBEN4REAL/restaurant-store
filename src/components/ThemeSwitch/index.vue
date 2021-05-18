@@ -1,56 +1,38 @@
 <template>
     <div class="mt-2">
       <div class="toggler-button refresh_toggler">
-        <input type="checkbox" v-model="darkMode" />
-        <div class="dark_check refresh_dark_check" :class="!darkMode ? 'light_check' : null" @click="toggleCheck">
-            <div class="dark_check_inner" :style="[darkMode ? {left: '21px'} : null]"></div>
+        <input type="checkbox" v-model="nightMode" /> 
+        <div class="dark_check refresh_dark_check" :class="!nightMode ? 'light_check' : null" @click="darkThemeSwitch">
+            <div class="dark_check_inner" :style="[nightMode ? {left: '21px'} : null]"></div>
         </div>
       </div>
     </div>
 </template>
 <script>
+import ThemeChanger from "@/utils/theme.js";
+
 export default {
     name: 'ThemeSwitch',
     data() {
         return {
-            darkMode: localStorage.getItem('storeTheme') && localStorage.getItem('storeTheme') == "true"
+            nightMode: localStorage.getItem('nightMode') && localStorage.getItem('nightMode') == 'true' 
                 ? true 
-                :  localStorage.getItem('storeTheme') && localStorage.getItem('storeTheme') == "false"
-                ? false : false ,
+                : localStorage.getItem('nightMode') && localStorage.getItem('nightMode') == 'false' 
+                ? false 
+                : false,
+            themeChanger:null
         }
     },
-    mounted() {
-       this.switchTheme()
-    },
-    
     methods: {
-        switchTheme() {
-            const appBody = document.getElementById('app-body')
-            const headerLinks = Array.from(document.querySelectorAll('.header__navigation-item-link'))
-
-            if(this.darkMode) {
-                appBody.classList.remove('light-mode') 
-                appBody.classList.add('dark-mode') 
-                headerLinks.forEach(link => {
-                    link.classList.add('dark-mode-text')
-                    link.classList.remove('light-mode-text')
-                });
-                
-            }else {
-                appBody.classList.add('light-mode') 
-                appBody.classList.remove('dark-mode') 
-                headerLinks.forEach(link => {
-                    link.classList.remove('dark-mode-text')
-                    link.classList.add('light-mode-text')
-                });
-            }
+        darkThemeSwitch() {
+            this.themeChanger._darkThemeSwitch();
+            this.nightMode = !this.nightMode
+            localStorage.setItem('nightMode', this.nightMode)
         },
-        toggleCheck() {
-            this.darkMode = !this.darkMode
-            localStorage.setItem('storeTheme' , this.darkMode)
-            this.switchTheme()
-        },
-    }
+    },
+    created() {
+        this.themeChanger = new ThemeChanger();
+    },
 
 }
 </script>

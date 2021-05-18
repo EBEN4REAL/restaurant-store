@@ -3,6 +3,7 @@
 @import "scroll";
 @import "themeSwitch.scss";
 
+
 html, body {
   min-height: 100%;
   margin: 0;
@@ -35,7 +36,6 @@ html, body {
     }
     &--card {
       width: 25%;
-      background: var(--color-white);
       height: 200px;
       border-radius: 0.7rem;
       margin-right: 25px;
