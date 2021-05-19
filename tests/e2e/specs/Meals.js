@@ -83,8 +83,10 @@ describe('Meals component', () => {
               submitMealBtn.click({force: true})
               for(let i=0; i<recipeFormInputs.length; i++)  {
                 it(`should check that the recipe is properly validated`, () => {
-                    const inputField = cy.get(`.${recipeFormInputs[i].class}`)
-                    expect(inputField.value).to.be.greaterThan(0)
+                    cy.get(`.${recipeFormInputs[i].class}`).invoke('val')
+                        .then(val => {
+                            expect(val).toBeGreaterThan(0)
+                        })
                 })
               }
         })
@@ -169,11 +171,10 @@ describe('Meals component', () => {
                     return `${meals} Meals`
                 }
 
-                const calculatedMeals = calculateIngredients(pastaQuantity, eggsQty, baconQty, oilQty, milkQty, butterQty)
+                let calculatedMeals = calculateIngredients(pastaQuantity, eggsQty, baconQty, oilQty, milkQty, butterQty)
 
-                console.log(pastaQuantity, eggsQty, baconQty, oilQty, milkQty, butterQty)
+                if(calculatedMeals !== '2 Meals') throw new Error("Expected output to be '2 Meals' ")
 
-                console.log(calculatedMeals)
             })
         })
     })
