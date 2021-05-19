@@ -32,13 +32,13 @@ export default {
   name: 'RecipeForm',
   data () {
     return {
-      meals: 0,
-      eggs: 0,
-      pasta: 0,
-      butter: 0,
-      bacon: 0,
-      milk: 0,
-      oil: 0
+      meals: null,
+      eggs: null,
+      pasta: null,
+      butter: null,
+      bacon: null,
+      milk: null,
+      oil: null
     };
   },
   props: {
