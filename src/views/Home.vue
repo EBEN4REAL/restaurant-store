@@ -9,9 +9,6 @@ import moment from 'moment'
 
 export default {
   name: 'Home',
-  components: {
-
-  },
   data () {
     return {
       currentTime: moment().format('dddd, MMMM Do YYYY, h:mm:ss a')
@@ -26,11 +23,8 @@ export default {
     
   },
   mounted() {
-    const setTimer = () => setTimeout(() => {
-      this.currentTime = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
-      setTimer();
-    }, 1000);
-    setTimer();
+    this.currentTime = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
+   
   },
   methods: {
     

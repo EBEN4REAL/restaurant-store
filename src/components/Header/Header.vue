@@ -10,7 +10,7 @@
       <li class="header__navigation-item" >
         <router-link :to="{path: '/restaurants'}" class="header__navigation-item-link">Our Restaurants</router-link>
       </li>
-      <li title="Toggle theme mode">
+      <li title="Switch Mode">
         <ThemeSwitch />
       </li>
     </ul>
@@ -29,11 +29,10 @@ export default {
   },
   data(){
     return {
-      key: 0
     }
   },
   methods: {
-    
+
   }
 }
 </script>

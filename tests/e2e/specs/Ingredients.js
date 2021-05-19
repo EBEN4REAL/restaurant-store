@@ -9,6 +9,4 @@ describe('Submitted Ingredients Page', () => {
         cy.get('[data-test=cards-wrapper]')
     })
     
-    
-
 })
