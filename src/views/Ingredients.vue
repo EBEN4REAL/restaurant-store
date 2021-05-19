@@ -1,11 +1,11 @@
 <template>
-  <div class="page page__stores">
+  <div class="page page__stores" data-test="page-stores">
     <IngredientsBanner :backgroundMedia="bannerProps.backgroundMedia" :text="bannerProps.text" />
     <div class="page__stores-header-wrapper">
       <h3 class="page__stores-header">Restaurant Info</h3>
     </div>
-    <div class="page__stores--cards-wrapper mt-4">
-      <div class="page__stores--card" v-for="(ingredient,i) in capitalizedIngredients" :key="i">
+    <div class="page__stores--cards-wrapper mt-4"  data-test="cards-wrapper">
+      <div class="page__stores--card" v-for="(ingredient,i) in capitalizedIngredients" :key="i" >
         <h3 class="text-black">{{ingredient.name}}</h3>
         <img :src="require(`@/assets/img/${ingredient.imageExt}`)" width="50" />
         <p class="text-black">{{ingredient.quantity}}</p>

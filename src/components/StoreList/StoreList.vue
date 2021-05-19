@@ -1,15 +1,15 @@
 <template>
-  <div class="store-list">
+  <div class="store-list" data-test="stores-list">
     <p>Here you can find all of our restaurants. We have {{ storesCount }} stores right now!</p>
     
-    <div class="store-list__form-conainer">
+    <div class="store-list__form-conainer" >
       <form class="store-list__form">
-        <input type="text" class="store-list__textbox" placeholder="Search stores..." v-model="searchText">
+        <input type="text" class="store-list__textbox" placeholder="Search stores..." v-model="searchText" data-test="stores-search">
         <i class="fa fa-search" aria-hidden="true" ></i>  
       </form>
     </div>
 
-    <div class="store-list__container">
+    <div class="store-list__container" data-test="stores-list-wrapper">
       <Store class="store-list__item" 
         v-for="store in filteredStores" 
         :key="store.id"
