@@ -11,7 +11,6 @@ export default {
       joke: null
     }
   },
-
   mounted(){
     this.fetchJokes()
   },
