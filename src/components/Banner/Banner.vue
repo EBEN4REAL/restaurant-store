@@ -16,9 +16,10 @@
   </div>
 </template>
 <style lang="scss">
-@import './Banner.scss';
+  @import './Banner.scss';
 </style>
 <script>
+
 export default {
   name: 'Banner',
   props: {

@@ -11,17 +11,22 @@
         <p class="text-black">{{ingredient.quantity}}</p>
       </div>
     </div>
+    <div class="text-center mt-5">
+      <Joke />
+    </div>
   </div>
 </template>
 
 <script>
+const Joke = () => import('@/components/Joke')
 const IngredientsBanner = () => import("@/components/Banner/Banner.vue");
 
 
 export default {
   name: 'Stores',
   components: {
-    IngredientsBanner
+    IngredientsBanner,
+    Joke
   },
   data () {
     return {

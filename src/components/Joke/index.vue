@@ -1,6 +1,6 @@
 <template>
-     <div class="text-center mt-3">
-        <small>{{joke}}</small>
+     <div class="mt-3">
+        <small><span class="joke mr-3">Joke of the day: </span> {{joke}}</small>
     </div>
 </template>
 <script>

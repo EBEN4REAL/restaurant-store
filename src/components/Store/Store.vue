@@ -6,7 +6,6 @@
       <img :src="require('@/assets/img/storeBg.jpg')" :alt="title" :title="title" />
       <div class="mt-3">
         <Joke />
-        <!-- <small><span class="store__joke mr-3">Joke of the day:</span> {{joke}}</small> -->
       </div>
     </div>
   </div>
