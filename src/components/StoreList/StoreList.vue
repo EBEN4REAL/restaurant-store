@@ -47,7 +47,7 @@ export default {
     return {
       searchText: '',
 			page: 1,
-			perPage: 20,
+			perPage: 16,
 			pages: [],
     }
   },
@@ -65,11 +65,9 @@ export default {
     },
     storesWithImages () {
       return this.stores.map(store => {
-          store.image = 'https://via.placeholder.com/300?text=' + store.name
-          
+          store.image = 'storeBg.jpg' 
           return store
         })
-      
     },
     storesCount () {
       return this.stores.length
