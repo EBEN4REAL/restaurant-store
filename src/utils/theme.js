@@ -17,14 +17,8 @@ export default class ThemeChanger {
         parentNode.removeChild(darkThemeLinkEl)
     }
     _darkThemeSwitch() {
-        const nightMode = localStorage.getItem('nightMode') && localStorage.getItem('nightMode') == 'true' 
-        ? true 
-        : localStorage.getItem('nightMode') && localStorage.getItem('nightMode') == 'false' 
-        ? false 
-        : false
-
         const darkThemeLinkEl = document.querySelector('#dark-theme-style')
-        if (!darkThemeLinkEl || nightMode) {
+        if (!darkThemeLinkEl) {
             this._addDarkTheme()
         } else {
             this._removeDarkTheme()
