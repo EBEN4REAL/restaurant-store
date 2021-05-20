@@ -15,7 +15,9 @@
     border-radius: 12px;
     padding-bottom: 25px;
   }
-
+  &__joke{
+    font-weight: 700;
+  }
   &__title {
     margin: 0 var( --space-xs) 0 0;
     padding: 0;

@@ -90,38 +90,6 @@ export default {
           type: "success",
           timeout: 3000
       });
-      const mealIngredients = [
-        {
-          name: 'eggs',
-          quantity: this.eggs,
-          imageExt: 'eggs.png'
-        },
-        {
-          name: 'oil',
-          quantity: this.oil,
-          imageExt: 'oil.png'
-        },
-        {
-          name: 'milk',
-          quantity: this.milk,
-          imageExt: 'milk.png'
-        },
-        {
-          name: 'butter',
-          quantity: this.butter,
-          imageExt: 'butter.png'
-        },
-        {
-          name: 'pasta',
-          quantity: this.pasta,
-          imageExt: 'pasta.png'
-        },
-        {
-          name: 'bacon',
-          quantity: this.bacon,
-          imageExt: 'bacon.png'
-        }
-      ]
       const bannerProps = {
         backgroundMedia: {
           type: 'image',
@@ -129,7 +97,6 @@ export default {
         },
         text: `${this.meals} Meals`
       }
-      localStorage.setItem('mealIngredients', JSON.stringify(mealIngredients))
       localStorage.setItem('bannerProps', JSON.stringify(bannerProps))
       this.$router.push({name: 'ingredients'})
     }
